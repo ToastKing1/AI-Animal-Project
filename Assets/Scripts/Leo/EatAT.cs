@@ -1,14 +1,19 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
 	public class EatAT : ActionTask {
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
+        public BBParameter<AudioSource> source;
+        public BBParameter<AudioClip> clip;
+		public BBParameter<float> hunger;
+
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
 			return null;
 		}
 
@@ -16,12 +21,13 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			EndAction(true);
+            source.value.PlayOneShot(clip.value);
+            EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			
+			hunger.value += 10 * Time.deltaTime;
 		}
 
 		//Called when the task is disabled.
