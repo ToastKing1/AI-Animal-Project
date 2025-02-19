@@ -22,12 +22,17 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
             source.value.PlayOneShot(clip.value);
-            EndAction(true);
+            
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 			hunger.value += 10 * Time.deltaTime;
+
+			if (hunger.value > 95)
+			{
+				EndAction(true);
+			}
 		}
 
 		//Called when the task is disabled.

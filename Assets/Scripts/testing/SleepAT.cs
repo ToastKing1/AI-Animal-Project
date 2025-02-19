@@ -8,10 +8,11 @@ namespace NodeCanvas.Tasks.Actions {
 	public class SleepAT : ActionTask {
 
 		public BBParameter<GameObject> sleepySprite;
+        public BBParameter<GameObject> sun;
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
 			return null;
 		}
 
@@ -24,17 +25,12 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			
+			if (sun.value.GetComponent<DayNightCycle>().night)
+			{
+                sleepySprite.value.SetActive(!sleepySprite.value.activeInHierarchy);
+                EndAction(true);
+			}
 		}
 
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
-
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
-		}
 	}
 }
