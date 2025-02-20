@@ -122,6 +122,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &97367817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97367818}
+  m_Layer: 0
+  m_Name: MorningSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97367818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97367817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.67, y: -0.286, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 296371778}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296371774
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +259,7 @@ Transform:
   - {fileID: 1978164679}
   - {fileID: 2123857658}
   - {fileID: 1981451494}
+  - {fileID: 97367818}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &804412390
@@ -292,6 +324,7 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Sun":{"_value":6,"_name":"Sun","_id":"631661b4-8220-4644-9dd2-657fb3b8ede6","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"LeoNav":{"_value":7,"_name":"LeoNav","_id":"d959948c-f5d3-4b85-9c1c-41b83e327539","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
     UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepingSpot":{"_value":8,"_name":"SleepingSpot","_id":"4f1f4fa2-ce16-4d7f-bde1-8a9f0af96313","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"MorningSpot":{"_value":9,"_name":"MorningSpot","_id":"7e4ea379-789f-4161-9941-92547a517cd2","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -303,6 +336,7 @@ MonoBehaviour:
   - {fileID: 1112770385}
   - {fileID: 804412395}
   - {fileID: 1981451494}
+  - {fileID: 97367818}
   _serializedVariables:
   - _json: '{"_value":1,"_name":"audio","_id":"6728d72e-5558-4d8e-a3e2-063910fe29d7","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AudioSource,
       UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
@@ -359,6 +393,11 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1981451494}
+  - _json: '{"_value":1,"_name":"MorningSpot","_id":"7e4ea379-789f-4161-9941-92547a517cd2","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 97367818}
 --- !u!114 &804412393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1978164679
 Transform:
   m_ObjectHideFlags: 0

@@ -17,7 +17,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			if (sleeping.value) EndAction();
+			if (sleeping.value)
+			{
+				return;
+			}
 			
 			thirst.value -= survivalRate.value * Time.deltaTime;
 			hunger.value -= survivalRate.value * Time.deltaTime;

@@ -11,11 +11,13 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<GameObject> sun;
 		public BBParameter<Transform> sleepingSpot;
         public BBParameter<NavMeshAgent> navMeshAgent;
+        public BBParameter<GameObject> sleepSprite;
+        public BBParameter<bool> interrupted;
 
-		//This is called once each time the task is enabled.
-		//Call EndAction() to mark the action as finished, either in success or failure.
-		//EndAction can be called from anywhere.
-		protected override void OnExecute() {
+        //This is called once each time the task is enabled.
+        //Call EndAction() to mark the action as finished, either in success or failure.
+        //EndAction can be called from anywhere.
+        protected override void OnExecute() {
             navMeshAgent = agent.GetComponent<NavMeshAgent>();
             navMeshAgent.value.destination = sleepingSpot.value.position;
             navMeshAgent.value.stoppingDistance = 0.2f;
@@ -23,8 +25,9 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-            if (sun.value.GetComponent<DayNightCycle>().night)
+            if (!sun.value.GetComponent<DayNightCycle>().night)
 			{
+                interrupted.value = true;
                 EndAction(true);
             }
             else if (navMeshAgent.value.remainingDistance <= navMeshAgent.value.stoppingDistance && !navMeshAgent.value.pathPending)

@@ -11,14 +11,18 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<GameObject> sun;
 
 		protected override void OnExecute() {
-			sleepySprite.value.SetActive(sleepySprite.value.activeInHierarchy);
+			if (sun.value.GetComponent<DayNightCycle>().night)
+			{
+                sleepySprite.value.SetActive(true);
+            }
+			
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 			if (!sun.value.GetComponent<DayNightCycle>().night)
 			{
-                sleepySprite.value.SetActive(!sleepySprite.value.activeInHierarchy);
+                sleepySprite.value.SetActive(false);
                 EndAction(true);
 			}
 		}
