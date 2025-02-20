@@ -13,14 +13,14 @@ namespace NodeCanvas.Tasks.Actions {
 		public BBParameter<float> thirst;
 		public BBParameter<float> hunger;
 
-		public float survivalRate;
+		public BBParameter<float> survivalRate;
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 			if (sleeping.value) EndAction();
 			
-			thirst.value -= survivalRate * Time.deltaTime;
-			hunger.value -= survivalRate * Time.deltaTime;
+			thirst.value -= survivalRate.value * Time.deltaTime;
+			hunger.value -= survivalRate.value * Time.deltaTime;
 		}
 
 		

@@ -227,6 +227,7 @@ Transform:
   m_Children:
   - {fileID: 1978164679}
   - {fileID: 2123857658}
+  - {fileID: 1981451494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &804412390
@@ -284,16 +285,24 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Sleeping":{"_name":"Sleeping","_id":"dd056b81-a65b-4a23-ad6d-11058c7d0601","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Roar":{"_value":2,"_name":"Roar","_id":"5df45f5f-41da-4f98-ad0a-4d6adc1df5cd","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AudioClip,
     UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Eating":{"_value":3,"_name":"Eating","_id":"8ae16efd-9864-4c09-bc30-2af141b65018","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AudioClip,
-    UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Sun":{"_value":4,"_name":"Sun","_id":"f215571d-d5a7-42fe-8d58-a6204338a132","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PondSpot":{"_value":5,"_name":"PondSpot","_id":"a45a6a62-cc8c-4d9a-a3ec-3eb5fa3504de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PondSpot":{"_value":4,"_name":"PondSpot","_id":"a45a6a62-cc8c-4d9a-a3ec-3eb5fa3504de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SurvivalRate":{"_value":2.0,"_name":"SurvivalRate","_id":"d8a678da-ce35-4e4d-ae5b-729d65a1fe2c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"EatingRate":{"_value":10.0,"_name":"EatingRate","_id":"953a37e7-6ec7-4002-b800-c66e680be556","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"SleepSprite":{"_value":5,"_name":"SleepSprite","_id":"9bb97f9b-0308-4e30-be20-3790c67a9216","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Sun":{"_value":6,"_name":"Sun","_id":"631661b4-8220-4644-9dd2-657fb3b8ede6","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"LeoNav":{"_value":7,"_name":"LeoNav","_id":"d959948c-f5d3-4b85-9c1c-41b83e327539","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
+    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepingSpot":{"_value":8,"_name":"SleepingSpot","_id":"4f1f4fa2-ce16-4d7f-bde1-8a9f0af96313","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 804412394}
   - {fileID: 8300000, guid: 05d71f8b9bd1c82408b3b76b45a2546b, type: 3}
   - {fileID: 8300000, guid: 4d8f854414f377949b562767d867259b, type: 3}
-  - {fileID: 1112770385}
   - {fileID: 1786786574}
+  - {fileID: 1978164678}
+  - {fileID: 1112770385}
+  - {fileID: 804412395}
+  - {fileID: 1981451494}
   _serializedVariables:
   - _json: '{"_value":1,"_name":"audio","_id":"6728d72e-5558-4d8e-a3e2-063910fe29d7","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AudioSource,
       UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
@@ -319,16 +328,37 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 8300000, guid: 4d8f854414f377949b562767d867259b, type: 3}
-  - _json: '{"_value":1,"_name":"Sun","_id":"f215571d-d5a7-42fe-8d58-a6204338a132","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
-    _references:
-    - {fileID: 0}
-    - {fileID: 1112770385}
   - _json: '{"_value":1,"_name":"PondSpot","_id":"a45a6a62-cc8c-4d9a-a3ec-3eb5fa3504de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references:
     - {fileID: 0}
     - {fileID: 1786786574}
+  - _json: '{"_value":2.0,"_name":"SurvivalRate","_id":"d8a678da-ce35-4e4d-ae5b-729d65a1fe2c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":10.0,"_name":"EatingRate","_id":"953a37e7-6ec7-4002-b800-c66e680be556","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":1,"_name":"SleepSprite","_id":"9bb97f9b-0308-4e30-be20-3790c67a9216","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1978164678}
+  - _json: '{"_value":1,"_name":"Sun","_id":"631661b4-8220-4644-9dd2-657fb3b8ede6","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1112770385}
+  - _json: '{"_value":1,"_name":"LeoNav","_id":"d959948c-f5d3-4b85-9c1c-41b83e327539","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
+      UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 804412395}
+  - _json: '{"_value":1,"_name":"SleepingSpot","_id":"4f1f4fa2-ce16-4d7f-bde1-8a9f0af96313","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1981451494}
 --- !u!114 &804412393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,19 +372,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Passive","_position":{"x":398.0,"y":164.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.HuntAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Hunt","_position":{"x":527.0,"y":230.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"source":{"_name":"audio","_targetVariableID":"6728d72e-5558-4d8e-a3e2-063910fe29d7"},"clip":{"_name":"Roar","_targetVariableID":"5df45f5f-41da-4f98-ad0a-4d6adc1df5cd"},"$type":"NodeCanvas.Tasks.Actions.AttackAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Attack","_position":{"x":641.0,"y":317.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"source":{"_name":"audio","_targetVariableID":"6728d72e-5558-4d8e-a3e2-063910fe29d7"},"clip":{"_name":"Eating","_targetVariableID":"8ae16efd-9864-4c09-bc30-2af141b65018"},"hunger":{"_name":"Hunger","_targetVariableID":"37361ae4-27db-49f7-932e-6e8c6333bdbf"},"$type":"NodeCanvas.Tasks.Actions.EatAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Eat","_position":{"x":789.0,"y":386.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_actionList":{"executionMode":1,"actions":[{"pondSpot":{"_name":"PondSpot","_targetVariableID":"a45a6a62-cc8c-4d9a-a3ec-3eb5fa3504de"},"navMeshAgent":1,"$type":"NodeCanvas.Tasks.Actions.TravelToPondAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Travel
-    to Pond","_position":{"x":105.5308,"y":77.16116},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"},{"_actionList":{"executionMode":1,"actions":[{"Thirst":{"_name":"Thirst","_targetVariableID":"55656103-aea2-479d-b5b1-56e8465b80a6"},"$type":"NodeCanvas.Tasks.Actions.DrinkAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Drink","_position":{"x":272.0288,"y":25.87406},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"},{"_position":{"x":15.95698,"y":280.9109},"$type":"NodeCanvas.StateMachines.AnyState","$id":"6"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.FleeAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Flee","_position":{"x":99.5777,"y":429.5699},"$type":"NodeCanvas.StateMachines.ActionState","$id":"7"},{"_actionList":{"executionMode":1,"actions":[{"sleepySprite":{"_value":2},"sun":{},"$type":"NodeCanvas.Tasks.Actions.SleepAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleep","_position":{"x":283.0,"y":488.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"8"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"sleeping":{"_name":"Sleeping","_targetVariableID":"dd056b81-a65b-4a23-ad6d-11058c7d0601"},"thirst":{"_name":"Thirst","_targetVariableID":"55656103-aea2-479d-b5b1-56e8465b80a6"},"hunger":{"_name":"Hunger","_targetVariableID":"37361ae4-27db-49f7-932e-6e8c6333bdbf"},"survivalRate":2.0,"$type":"NodeCanvas.Tasks.Actions.HungerThirstAT"}]},"_position":{"x":222.3408,"y":269.4691},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"valueA":{"_name":"Hunger","_targetVariableID":"37361ae4-27db-49f7-932e-6e8c6333bdbf"},"checkType":2,"valueB":{"_value":60.0},"$type":"NodeCanvas.Tasks.Conditions.CheckFloat"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"valueA":{"_name":"Thirst","_targetVariableID":"55656103-aea2-479d-b5b1-56e8465b80a6"},"checkType":4,"valueB":{"_value":80.0},"$type":"NodeCanvas.Tasks.Conditions.CheckFloat"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeout":{"_value":6.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeout":{"_value":6.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"sun":{"_name":"Sun","_targetVariableID":"f215571d-d5a7-42fe-8d58-a6204338a132"},"$type":"NodeCanvas.Tasks.Conditions.FleeCT"},"_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"SleepSprite":{"_value":2,"_name":"SleepSprite","_id":"5d06d92f-8f36-4318-96e9-27ef81198165","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.PassiveAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Passive","_position":{"x":398.0,"y":165.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.HuntAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Hunt","_position":{"x":527.0,"y":230.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"source":{"_name":"audio","_targetVariableID":"6728d72e-5558-4d8e-a3e2-063910fe29d7"},"clip":{"_name":"Roar","_targetVariableID":"5df45f5f-41da-4f98-ad0a-4d6adc1df5cd"},"$type":"NodeCanvas.Tasks.Actions.AttackAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Attack","_position":{"x":641.0,"y":317.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"source":{"_name":"audio","_targetVariableID":"6728d72e-5558-4d8e-a3e2-063910fe29d7"},"clip":{"_name":"Eating","_targetVariableID":"8ae16efd-9864-4c09-bc30-2af141b65018"},"hunger":{"_name":"Hunger","_targetVariableID":"37361ae4-27db-49f7-932e-6e8c6333bdbf"},"survivalRate":{"_name":"SurvivalRate","_targetVariableID":"d8a678da-ce35-4e4d-ae5b-729d65a1fe2c"},"eatingRate":{"_name":"EatingRate","_targetVariableID":"953a37e7-6ec7-4002-b800-c66e680be556"},"$type":"NodeCanvas.Tasks.Actions.EatAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Eat","_position":{"x":789.0,"y":386.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_actionList":{"executionMode":1,"actions":[{"pondSpot":{"_name":"PondSpot","_targetVariableID":"a45a6a62-cc8c-4d9a-a3ec-3eb5fa3504de"},"navMeshAgent":{},"$type":"NodeCanvas.Tasks.Actions.TravelToPondAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Travel
+    to Pond","_position":{"x":104.5308,"y":77.16116},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"},{"_actionList":{"executionMode":1,"actions":[{"Thirst":{"_name":"Thirst","_targetVariableID":"55656103-aea2-479d-b5b1-56e8465b80a6"},"$type":"NodeCanvas.Tasks.Actions.DrinkAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Drink","_position":{"x":272.0288,"y":25.87406},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"},{"_position":{"x":15.95698,"y":280.9109},"$type":"NodeCanvas.StateMachines.AnyState","$id":"6"},{"_nestedFSM":{"_value":1},"_position":{"x":138.6831,"y":424.9552},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"7"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"sleeping":{"_name":"Sleeping","_targetVariableID":"dd056b81-a65b-4a23-ad6d-11058c7d0601"},"thirst":{"_name":"Thirst","_targetVariableID":"55656103-aea2-479d-b5b1-56e8465b80a6"},"hunger":{"_name":"Hunger","_targetVariableID":"37361ae4-27db-49f7-932e-6e8c6333bdbf"},"survivalRate":{"_name":"SurvivalRate","_targetVariableID":"d8a678da-ce35-4e4d-ae5b-729d65a1fe2c"},"$type":"NodeCanvas.Tasks.Actions.HungerThirstAT"}]},"_position":{"x":222.3408,"y":269.4691},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"valueA":{"_name":"Hunger","_targetVariableID":"37361ae4-27db-49f7-932e-6e8c6333bdbf"},"checkType":2,"valueB":{"_value":60.0},"$type":"NodeCanvas.Tasks.Conditions.CheckFloat"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"valueA":{"_name":"Thirst","_targetVariableID":"55656103-aea2-479d-b5b1-56e8465b80a6"},"checkType":4,"valueB":{"_value":80.0},"$type":"NodeCanvas.Tasks.Conditions.CheckFloat"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeout":{"_value":6.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"sun":{"_name":"Sun","_targetVariableID":"631661b4-8220-4644-9dd2-657fb3b8ede6"},"$type":"NodeCanvas.Tasks.Conditions.FleeCT"},"_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
-  - {fileID: 804412395}
-  - {fileID: 1978164678}
+  - {fileID: 11400000, guid: 8c7a9f8467ae6df40986e6be6e266157, type: 2}
   _boundGraphSource:
     _version: 3.29
     _category: 
     _comments: 
-    _translation: {x: 129.18608, y: 119.531334}
-    _zoomFactor: 1
+    _translation: {x: 113, y: 119}
+    _zoomFactor: 0.83184165
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -1050,6 +1078,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1981451493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981451494}
+  m_Layer: 0
+  m_Name: SleepingSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1981451494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981451493}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.687, y: -0.286, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 296371778}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084634715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.424, y: -0.082}
+  m_AnchoredPosition: {x: 0.424, y: 0.397}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123857659

@@ -10,6 +10,10 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<AudioSource> source;
         public BBParameter<AudioClip> clip;
 		public BBParameter<float> hunger;
+        public BBParameter<float> survivalRate;
+
+		public BBParameter<float> eatingRate;
+
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -27,7 +31,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			hunger.value += 10 * Time.deltaTime;
+			hunger.value += (eatingRate.value + survivalRate.value) * Time.deltaTime;
 
 			if (hunger.value > 95)
 			{
