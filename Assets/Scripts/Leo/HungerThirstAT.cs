@@ -19,11 +19,14 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnUpdate() {
 			if (sleeping.value)
 			{
-				return;
+				EndAction(true);
 			}
-			
-			thirst.value -= survivalRate.value * Time.deltaTime;
-			hunger.value -= survivalRate.value * Time.deltaTime;
+			else
+			{
+				thirst.value -= survivalRate.value * Time.deltaTime;
+				hunger.value -= survivalRate.value * Time.deltaTime;
+				EndAction(true);
+			}
 		}
 
 		

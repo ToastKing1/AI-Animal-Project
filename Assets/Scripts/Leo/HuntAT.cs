@@ -18,6 +18,7 @@ namespace NodeCanvas.Tasks.Actions {
         public float wanderRadius;
 
 		protected override void OnExecute() {
+            navMeshAgent.value.stoppingDistance = 1f;
             rabbit.value = null;
 		}
 
@@ -45,8 +46,9 @@ namespace NodeCanvas.Tasks.Actions {
             {
                 Debug.Log(navMeshAgent.value.remainingDistance);
                 navMeshAgent.value.destination = rabbit.value.transform.position;
-                if (navMeshAgent.value.isStopped)
+                if (navMeshAgent.value.remainingDistance < 1.25)
                 {
+                    rabbit.value.GetComponent<NavMeshAgent>().isStopped = true;
                     EndAction(true);
                 }
                 
