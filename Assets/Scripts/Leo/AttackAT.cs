@@ -16,6 +16,7 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<NavMeshAgent> navMeshAgent;
 
 		bool roar;
+		float roarTime;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -32,17 +33,29 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-            if (navMeshAgent.value.remainingDistance <= navMeshAgent.value.stoppingDistance && !navMeshAgent.value.pathPending)
-            {
-				if (!roar)
+			if (roar)
+			{
+				roarTime += 1 * Time.deltaTime;
+
+				if (roarTime > 3)
 				{
-					source.value.PlayOneShot(clip.value);
-					roar = true;
+					EndAction(true);
 				}
-				Blackboard rabbitBlackboard = rabbit.value.GetComponent<Blackboard>();
-				rabbitBlackboard.SetVariableValue("dead", true);
-                EndAction(true);
-            }
+			}
+			else
+			{
+				if (navMeshAgent.value.remainingDistance <= navMeshAgent.value.stoppingDistance && !navMeshAgent.value.pathPending)
+				{
+					if (!roar)
+					{
+						source.value.PlayOneShot(clip.value);
+						roar = true;
+					}
+					Blackboard rabbitBlackboard = rabbit.value.GetComponent<Blackboard>();
+					rabbitBlackboard.SetVariableValue("dead", true);
+
+				}
+			}
         }
 
 		//Called when the task is disabled.
