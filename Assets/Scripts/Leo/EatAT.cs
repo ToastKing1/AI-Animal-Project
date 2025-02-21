@@ -12,6 +12,8 @@ namespace NodeCanvas.Tasks.Actions {
 		public BBParameter<float> hunger;
         public BBParameter<float> survivalRate;
 
+		public BBParameter<GameObject> rabbit;
+
 		public BBParameter<float> eatingRate;
 
 
@@ -25,6 +27,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+			source.value.Stop();
             source.value.PlayOneShot(clip.value);
             
 		}
@@ -32,8 +35,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 			hunger.value += (eatingRate.value + survivalRate.value) * Time.deltaTime;
-
-			if (hunger.value > 95)
+			rabbit.value.SetActive(false);
+            if (hunger.value > 95)
 			{
 				EndAction(true);
 			}
