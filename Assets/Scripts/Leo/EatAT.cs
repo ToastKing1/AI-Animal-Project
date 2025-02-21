@@ -35,11 +35,15 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 			hunger.value += (eatingRate.value + survivalRate.value) * Time.deltaTime;
-			rabbit.value.SetActive(false);
+			
             if (hunger.value > 95)
 			{
-				EndAction(true);
-			}
+				rabbit.value.SetActive(false);
+
+                EndAction(true);
+                
+
+            }
 		}
 
 		//Called when the task is disabled.
